@@ -2,7 +2,7 @@
 
 import Input from "@/app/components/Input";
 import Button from "@/app/components/Button";
-import { Container, Content, Row } from "@/app/layout";
+import { Container, Content, Row } from "@/app/styles";
 import useCalculator from "@/app/hooks/useCalculator";
 
 export default function Home() {

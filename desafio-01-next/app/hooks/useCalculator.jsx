@@ -19,7 +19,7 @@ const useCalculator = () => {
 // Apaga o último dígito (CE)
     const handleBackspace = () => {
         setCurrentNumber(prev => {
-            const result = prev.slice(0. - 1);
+            const result = prev.slice(0, - 1);
             return result === '' ? '0' : result;
         });
     }
@@ -38,7 +38,7 @@ const useCalculator = () => {
         }
     }
 
-// Operação de Soma
+// Operação de Subtração
     const handleMinusNumbers = () => {
         if (firstNumber === '0') {
             setFirstNumber(String(currentNumber));
@@ -52,7 +52,7 @@ const useCalculator = () => {
         }
     }
 
-// Operação de Soma
+// Operação de Multiplicação
     const handleMultiplyNumbers = () => {
         if (firstNumber === '0') {
             setFirstNumber(String(currentNumber));
@@ -66,7 +66,7 @@ const useCalculator = () => {
         }
     }
 
-// Operação de Soma
+// Operação de Divisão
     const handleDivideNumbers = () => {
         if (firstNumber === '0') {
             setFirstNumber(String(currentNumber));
