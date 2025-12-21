@@ -2,77 +2,38 @@ import Input from "./components/Input";
 import Button from "./components/Button";
 
 import { Container, Content, Row } from "./styles";
-import {useState} from "react";
+import useCalculator from "./hooks/useCalculator";
+
 
 const App = () => {
+    const {
+        currentNumber,
+        handleAddNumber,
+        handleClear,
+        handleBackspace,
+        handleSumNumbers,
+        handleMinusNumbers,
+        handleMultiplyNumbers,
+        handleDivideNumbers,
+        handleEquals
+    } = useCalculator();
 
-    const [currentNumber, setCurrentNumber] = useState('0');
-    const [previousNumber, setPreviousNumber] = useState('0');
-    const [firstNumber, setFirstNumber] = useState('0');
-    const [operation, setOperation] = useState('');
-
-    const handleAddNumber = (number) => {
-        setPreviousNumber(currentNumber);
-        setCurrentNumber(prev => `${prev === '0' ? '' : prev}${number}`)
-    }
-
-    const handleClear = () => {
-        setCurrentNumber('0');
-        setFirstNumber('0');
-    }
-
-    const handleBackspace = () => {
-        setCurrentNumber(previousNumber);
-    }
-
-    const handleSumNumbers = () => {
-        if (firstNumber === '0') {
-            setFirstNumber(String(currentNumber));
-            handleClear();
-            setOperation('+');
-        } else {
-            const sum = Number(firstNumber) + Number(currentNumber);
-            setCurrentNumber(String(sum));
-            setOperation('');
-        }
-    }
-
-    const handleEquals = () => {
-        if (firstNumber !== '0' && operation !== '' && currentNumber !== '0') {
-            switch(operation) {
-                case '+':
-                    handleSumNumbers();
-                    break;
-                case '-':
-
-                    break;
-                case '*':
-
-                    break;
-                case '/':
-
-                    break;
-                default:
-                    break;
-            }
-        }
-    }
 
   return (
     <Container>
         <Content>
-            <Input value={currentNumber} onChange={e => setCurrentNumber(e.target.value)} />
+            <Input value={currentNumber} />
             <Row>
                 <Button label={"C"}  onClick={handleClear}/>
                 <Button label={"CE"}  onClick={handleBackspace}/>
-                <Button label={"*"}  onClick={() => handleAddNumber('*')}/>
-                <Button label={"/"}  onClick={() => handleAddNumber('-')}/>
+                <Button label={"*"}  onClick={handleMultiplyNumbers}/>
+                <Button label={"/"}  onClick={handleDivideNumbers}/>
             </Row>
             <Row>
                 <Button label={"7"}  onClick={() => handleAddNumber('7')}/>
                 <Button label={"8"}  onClick={() => handleAddNumber('8')}/>
                 <Button label={"9"}  onClick={() => handleAddNumber('9')}/>
-                <Button label={"-"}  onClick={() => handleAddNumber('-')}/>
+                <Button label={"-"}  onClick={handleMinusNumbers}/>
             </Row>
             <Row>
                 <Button label={"4"}  onClick={() => handleAddNumber('4')}/>
