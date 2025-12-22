@@ -1,0 +1,10 @@
+input {
+    border-radius: 22px;
+    min-width: 250px;
+    width: 70%;
+    border: 1px solid var(--border-color);
+    background: transparent;
+    font-size: 18px;
+    padding: 10px;
+    margin-right: 12px;
+}

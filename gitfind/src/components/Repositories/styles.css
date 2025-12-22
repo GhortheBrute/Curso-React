@@ -1,0 +1,20 @@
+.repositories {
+    margin: 20px 0 0 32px;
+}
+
+.repositories h4 {
+    font-size: 24px;
+    text-align: center;
+    color: var(--header-font-color);
+    margin-bottom: 32px;
+}
+
+.repositoryList strong{
+    color: var(--link-color);
+    font-size: 24px;
+}
+
+.repositoryList p {
+    font-size: 18px;
+    margin: 12px 0;
+}

@@ -1,0 +1,37 @@
+.profile {
+    display: flex;
+    margin: 20px 0;
+}
+
+img.profile-picture {
+    width: 128px;
+    height: 128px;
+    border-radius: 50%;
+    border: 2px solid var(--photo-border-color);
+}
+
+.profile h3 p span {
+    margin: 0;
+}
+
+.profile h3 {
+    font-size: 45px;
+}
+
+.profile span {
+    display: block;
+    font-size: 0.8rem;
+}
+
+.profile p {
+    font-size: 18px;
+    padding-top: 20px;
+}
+
+.profile-info {
+    margin-left: 32px;
+}
+
+hr {
+    color: var(--line-color);
+}

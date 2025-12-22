@@ -1,0 +1,17 @@
+:root {
+    --background-color: #1D2128;
+    --header-font-color: #FFFFFF;
+    --header-background-color: #2D333B;
+    --text-color: #999999;
+    --border-color: #999999;
+    --line-color: rgba(229,229,229,0.2);
+    --photo-border-color: #E5E5E5;
+    --button-color: #2D333B;
+    --link-color: #539BF5;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    color: var(--text-color);
+}
