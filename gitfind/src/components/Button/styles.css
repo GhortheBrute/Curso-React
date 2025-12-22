@@ -5,4 +5,17 @@ button {
     width: 23%;
     font-size: 18px;
     background: var(--button-color);
+    transition: all 0.2s ease;
+}
+
+button:active {
+    background-color: #000;
+    transform: scale(0.98);
+    font-weight: bold;
+}
+
+button.active {
+    background-color: #000;
+    transform: scale(0.98);
+    font-weight: bold;
 }

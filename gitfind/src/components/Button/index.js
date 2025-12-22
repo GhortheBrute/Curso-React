@@ -1,8 +1,13 @@
 import "./styles.css";
 
-const Button = ({ onClick }) => {
+const Button = ({ onClick, title="Buscar", active= false }) => {
     return (
-        <button onClick={onClick}>Buscar</button>
+        <button
+            onClick={onClick}
+            className={active ? "active" : ""}
+        >
+            {title}
+        </button>
     )
 }
 
