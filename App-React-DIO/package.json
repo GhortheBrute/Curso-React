@@ -1,0 +1,8 @@
+{
+  "name": "App-React-DIO",
+  "packageManager": "yarn@4.11.0",
+  "dependencies": {
+    "react": "^19.2.3",
+    "react-dom": "^19.2.3"
+  }
+}
