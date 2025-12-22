@@ -1,17 +1,13 @@
 import "./styles.css";
-import {useState} from "react";
 
-const Input = () => {
-    const [userName, setUserName] = useState('');
-    const [currentUsers, setCurrentUsers] = useState(null)
-
+const Input = ({ value, onChange}) => {
     return (
         <input
             name="usuario"
-            value={userName}
+            value={value}
             type="text"
             placeholder="@username"
-            onChange={event => setUserName(event.target.value)}/>
+            onChange={onChange}/>
     )
 }
 

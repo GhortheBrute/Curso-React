@@ -1,9 +1,8 @@
 import "./styles.css";
-import handleGetUserData from "../GetData";
 
-const Button = () => {
+const Button = ({ onClick }) => {
     return (
-        <button onClick={handleGetUserData}>Buscar</button>
+        <button onClick={onClick}>Buscar</button>
     )
 }
 

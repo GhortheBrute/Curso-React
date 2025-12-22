@@ -1,25 +1,16 @@
 import './styles.css';
-import {useState} from "react";
 
-const Repository = () => {
-    const [repositories, setRepositories] = useState(null);
-
-    const repositoryName = 'GitFind';
-    const repositoryDescription = 'Description'
-    return(
-        <div className="repositoryList">
-            <strong>{ repositoryName }</strong>
-            <p>{ repositoryDescription }</p>
-            <hr/>
-        </div>
-    )
-}
-
-const Repositories = () => {
+const Repositories = ({ repos }) => {
     return (
         <div className="repositories">
             <h4>Repositórios</h4>
-            <Repository/>
+            {repos.map(repo => (
+                <div key={repo.id} className="repositoryList">
+                    <strong>{ repo.name }</strong>
+                    <p>{ repo.description }</p>
+                    <hr/>
+                </div>
+            ))}
         </div>
     )
 }
